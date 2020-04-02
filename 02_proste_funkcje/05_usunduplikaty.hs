@@ -11,3 +11,6 @@ mogłoby być
 Funkcja byłaby wtedy bardziej uniwersalna
 -}
 usunduplikaty :: [Char] -> [Char]
+usunduplikaty (head:tail) = (head : usunduplikaty(newTail))
+	where newTail = filter (/= head) tail
+usunduplikaty [] = []

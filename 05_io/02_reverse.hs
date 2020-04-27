@@ -4,7 +4,7 @@ reverse' :: IO ()
 reverse' = do
         text <- getLine
 	if text == "" 
-            then putStrLn "Exited"
+            then return ()
             else do
                 putStrLn (reverse text) 
                 reverse'
